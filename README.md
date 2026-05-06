@@ -127,6 +127,7 @@ npm run dev
 - Connect repository to Vercel.
 - Set environment variables from `.env.example`.
 - Ensure `DATABASE_URL` points to managed Postgres.
+- Prisma Client is generated automatically during install/build via `postinstall` and the `build` script.
 - Build command: `npm run build`
 - Start command: `npm run start`
 
