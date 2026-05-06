@@ -7,8 +7,25 @@ export async function SiteFooter() {
 
   return (
     <footer className="relative border-t border-white/10 bg-[#050505]">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-400/70 to-transparent" />
       <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-transparent to-[#050505]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(255,43,43,0.18),transparent_30%)]" />
+      <div className="relative mx-auto w-full max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
+        <div className="rounded-xl border border-white/10 bg-gradient-to-r from-white/[0.06] via-white/[0.02] to-transparent px-6 py-6">
+          <p className="text-xs uppercase tracking-[0.2em] text-red-300">Strategic Engagement</p>
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-4">
+            <p className="max-w-3xl text-sm text-zinc-200 sm:text-base">
+              Connect with Blackridge Federal Solutions to align procurement-ready teams to mission-critical outcomes.
+            </p>
+            <Link
+              href="/contact"
+              className="rounded-md border border-red-500/60 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-200 transition hover:bg-red-500/20"
+            >
+              Schedule Briefing
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-8">
         <div className="space-y-4">
           <p className="text-xs uppercase tracking-[0.35em] text-red-500">{settings?.companyName ?? "Enterprise Platform"}</p>
@@ -57,7 +74,7 @@ export async function SiteFooter() {
       </div>
 
       <div className="relative overflow-hidden border-t border-white/10">
-        <p className="mx-auto max-w-7xl px-4 py-2 text-[72px] font-black uppercase tracking-[0.12em] text-white/8 sm:text-[96px] lg:px-8 lg:text-[124px]">
+        <p className="mx-auto max-w-7xl px-4 py-2 text-[72px] font-black uppercase tracking-[0.16em] text-white/8 sm:text-[96px] lg:px-8 lg:text-[124px]">
           AUTHORITY
         </p>
       </div>

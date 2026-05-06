@@ -24,14 +24,15 @@ export function SiteNav({ brand }: SiteNavProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-400/60 to-transparent" />
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="font-black uppercase tracking-[0.12em] text-white">
           {brand}
         </Link>
         <nav className="hidden items-center gap-6 text-sm text-zinc-300 lg:flex">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="transition hover:text-red-400">
+            <Link key={item.href} href={item.href} className="nav-link-premium transition hover:text-red-400">
               {item.label}
             </Link>
           ))}
