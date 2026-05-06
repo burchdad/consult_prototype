@@ -239,6 +239,60 @@ a {
     radial-gradient(circle at 50% 20%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.38) 72%);
 }
 
+.floating-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.7)) padding-box,
+    linear-gradient(135deg, rgba(255, 43, 43, 0.14), rgba(255, 255, 255, 0.07), rgba(255, 43, 43, 0.07)) border-box;
+  backdrop-filter: blur(4px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 20px rgba(255, 43, 43, 0.08);
+  border-radius: 1.5rem;
+}
+
+.floating-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 12% -8%, rgba(255, 43, 43, 0.1), transparent 35%),
+    radial-gradient(circle at 88% 108%, rgba(255, 43, 43, 0.06), transparent 40%);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.floating-panel-accent {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(125deg, rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.72)) padding-box,
+    linear-gradient(125deg, rgba(255, 43, 43, 0.22), rgba(255, 43, 43, 0.06) 45%, rgba(255, 255, 255, 0.05) 100%) border-box;
+  backdrop-filter: blur(4px);
+  box-shadow:
+    0 8px 32px rgba(255, 43, 43, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 24px rgba(255, 43, 43, 0.12);
+  border-radius: 1.5rem;
+}
+
+.floating-panel-accent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 43, 43, 0.16), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(255, 43, 43, 0.08), transparent 45%);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
 .homepage-cinematic-content > section {
   position: relative;
   z-index: 10;
@@ -247,10 +301,30 @@ a {
 
 .homepage-cinematic-content > section:not(:first-of-type) {
   margin-top: 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(5, 5, 5, 0.74);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.74), rgba(5, 5, 5, 0.74)) padding-box,
+    linear-gradient(135deg, rgba(255, 43, 43, 0.15), rgba(255, 255, 255, 0.08), rgba(255, 43, 43, 0.08)) border-box;
   backdrop-filter: blur(4px);
   border-radius: 1rem;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 24px rgba(255, 43, 43, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-cinematic-content > section:not(:first-of-type)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(255, 43, 43, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 100%, rgba(255, 43, 43, 0.08), transparent 45%);
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .homepage-cinematic-content > section:not(:first-of-type)::before {
@@ -261,10 +335,17 @@ a {
   top: 0;
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(255, 43, 43, 0.62), rgba(255, 255, 255, 0.42), transparent);
+  z-index: 1;
 }
 
 .homepage-cinematic-content > section:nth-of-type(odd):not(:first-of-type) {
-  background: rgba(5, 5, 5, 0.78);
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.78), rgba(5, 5, 5, 0.78)) padding-box,
+    linear-gradient(135deg, rgba(255, 43, 43, 0.18), rgba(255, 255, 255, 0.1), rgba(255, 43, 43, 0.1)) border-box;
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 28px rgba(255, 43, 43, 0.1);
 }
 
 .section-divider::after {
@@ -674,6 +755,26 @@ footer .relative.overflow-hidden {
 }
 
 @media (max-width: 768px) {
+  .floating-panel {
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 0 16px rgba(255, 43, 43, 0.06);
+  }
+
+  .floating-panel::before {
+    border-radius: 1rem;
+    opacity: 0.5;
+  }
+
+  .floating-panel-accent {
+    border-radius: 1rem;
+    box-shadow: 0 6px 24px rgba(255, 43, 43, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 0 20px rgba(255, 43, 43, 0.1);
+  }
+
+  .floating-panel-accent::before {
+    border-radius: 1rem;
+    opacity: 0.6;
+  }
+
   .homepage-earth-layer {
     inset: -10% -44% -10% -44%;
     background-position: 67% 43%;
@@ -700,8 +801,15 @@ footer .relative.overflow-hidden {
 
   .homepage-cinematic-content > section:not(:first-of-type) {
     margin-top: 1rem;
-    background: rgba(5, 5, 5, 0.8);
+    background:
+      linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.8)) padding-box,
+      linear-gradient(135deg, rgba(255, 43, 43, 0.12), rgba(255, 255, 255, 0.06), rgba(255, 43, 43, 0.06)) border-box;
     backdrop-filter: blur(2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 0 16px rgba(255, 43, 43, 0.06);
+  }
+
+  .homepage-cinematic-content > section:not(:first-of-type)::after {
+    opacity: 0.4;
   }
 
   .homepage-scene-release {

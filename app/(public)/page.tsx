@@ -239,7 +239,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="grid gap-8 rounded-2xl border border-white/10 bg-gradient-to-r from-white/[0.03] to-transparent py-12 lg:grid-cols-2 lg:py-14">
+      <Section className="floating-panel grid gap-8 py-12 lg:grid-cols-2 lg:py-14">
         <Reveal className="h-full">
           <p className="text-xs uppercase tracking-[0.2em] text-red-400">
             Global Impact
@@ -272,8 +272,8 @@ export default async function HomePage() {
         </Reveal>
 
         <Reveal delay={0.05} className="h-full">
-          <div className="relative h-full min-h-72 rounded-2xl border border-red-500/25 bg-[#080808] p-5">
-            <div className="absolute inset-0 rounded-2xl bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
+          <div className="floating-panel relative p-5">
+            <div className="absolute inset-0 rounded-[1.5rem] bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:24px_24px]" />
             <div className="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_70%_20%,rgba(255,43,43,0.22),transparent_36%)]" />
             <svg viewBox="0 0 600 320" className="relative h-full w-full">
               <circle cx="130" cy="120" r="6" fill="#ff2b2b" />
@@ -401,7 +401,7 @@ export default async function HomePage() {
 
       <Section
         id="services"
-        className="rounded-2xl border border-white/10 bg-white/[0.02] py-12 lg:py-14"
+        className="floating-panel py-12 lg:py-14"
       >
         <Reveal>
           <h2 className="text-4xl font-black uppercase">Core Services</h2>
@@ -582,7 +582,7 @@ export default async function HomePage() {
 
       <Section className="py-12 lg:py-14">
         <Reveal>
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-white/[0.04] to-transparent p-8">
+          <div className="floating-panel p-8">
             <div className="flex items-center gap-3 text-zinc-300">
               <Handshake size={18} className="text-red-400" />
               <p className="text-xs uppercase tracking-[0.22em]">Careers</p>
@@ -616,7 +616,7 @@ export default async function HomePage() {
 
       <Section className="py-12 lg:py-14">
         <Reveal>
-          <div className="rounded-2xl border border-red-500/30 bg-[linear-gradient(125deg,rgba(255,43,43,0.28),rgba(255,43,43,0.04)_45%,rgba(255,255,255,0.02)_100%)] p-8 text-center">
+          <div className="floating-panel-accent p-8 text-center">
             <p className="text-xs uppercase tracking-[0.22em] text-red-200">
               Start the Conversation
             </p>
