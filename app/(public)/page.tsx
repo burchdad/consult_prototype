@@ -141,15 +141,18 @@ export default async function HomePage() {
       }));
 
   return (
-    <main className="overflow-hidden">
+    <main className="homepage-atmosphere relative overflow-hidden">
+      <div aria-hidden className="homepage-atmosphere-backdrop">
+        <div className="homepage-earth-layer" />
+        <div className="homepage-atmosphere-layer" />
+        <div className="homepage-particle-layer" />
+        <div className="homepage-red-glow-layer" />
+        <div className="homepage-depth-vignette" />
+        <div className="homepage-footer-fade" />
+      </div>
+
       <section className="relative isolate border-b border-white/10">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="hero-earth-layer" />
-          <div className="hero-atmosphere-layer" />
-          <div className="hero-grain-layer" />
-          <div className="hero-red-glow-layer" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/75 to-[#050505]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/48 via-black/70 to-black/32" />
         <Section className="relative z-10 py-20 lg:py-24">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-red-400">
@@ -190,7 +193,7 @@ export default async function HomePage() {
         </Section>
       </section>
 
-      <Section className="py-10 lg:py-12">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/24 py-10 backdrop-blur-[1px] lg:py-12">
         <Reveal>
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-6">
             {metricItems.map((item) => (
@@ -307,7 +310,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/22 py-12 backdrop-blur-[1px] lg:py-14">
         <Reveal>
           <h2 className="text-4xl font-black uppercase">Company Growth Timeline</h2>
           <div className="mt-8 hidden grid-cols-5 gap-4 lg:grid">
@@ -339,7 +342,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/22 py-12 backdrop-blur-[1px] lg:py-14">
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-4xl font-black uppercase">Leadership Preview</h2>
@@ -415,7 +418,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/22 py-12 backdrop-blur-[1px] lg:py-14">
         <Reveal>
           <h2 className="text-4xl font-black uppercase">Mission Partners</h2>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -443,7 +446,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/22 py-12 backdrop-blur-[1px] lg:py-14">
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-4xl font-black uppercase">Contract Vehicles</h2>
@@ -474,7 +477,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/22 py-12 backdrop-blur-[1px] lg:py-14">
         <Reveal>
           <div className="flex items-end justify-between gap-4">
             <h2 className="text-4xl font-black uppercase">Case Studies</h2>
@@ -505,7 +508,7 @@ export default async function HomePage() {
         </Reveal>
       </Section>
 
-      <Section className="py-12 lg:py-14">
+      <Section className="rounded-2xl border border-white/[0.08] bg-black/24 py-12 backdrop-blur-[1px] lg:py-14">
         <Reveal>
           <div className="flex items-center gap-3 text-zinc-300">
             <ShieldCheck size={18} className="text-red-400" />

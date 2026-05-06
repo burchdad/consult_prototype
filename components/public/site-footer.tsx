@@ -7,6 +7,7 @@ export async function SiteFooter() {
 
   return (
     <footer className="relative border-t border-white/10 bg-[#050505]">
+      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-transparent to-[#050505]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(255,43,43,0.18),transparent_30%)]" />
       <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.2fr_1fr_1fr_1fr] lg:px-8">
         <div className="space-y-4">
