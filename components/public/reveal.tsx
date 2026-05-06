@@ -23,13 +23,13 @@ export function Reveal({
         className={cn(className)}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ delay }}
         variants={{
           hidden: {},
           visible: {
             transition: {
-              staggerChildren: 0.07,
+              staggerChildren: 0.1,
             },
           },
         }}
@@ -38,11 +38,11 @@ export function Reveal({
           <motion.div
             key={index}
             variants={{
-              hidden: { opacity: 0.92, y: 6 },
+              hidden: { opacity: 0, y: 28 },
               visible: {
                 opacity: 1,
                 y: 0,
-                transition: { duration: 0.45 },
+                transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
               },
             }}
           >
@@ -56,10 +56,10 @@ export function Reveal({
   return (
     <motion.div
       className={cn(className)}
-      initial={{ opacity: 0.92, y: 6 }}
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.45, delay }}
+      viewport={{ once: true, amount: 0.25 }}
+      transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>

@@ -25,19 +25,20 @@ export function HomepageCinematicScene({ children }: HomepageCinematicSceneProps
     offset: ["start start", "end end"],
   });
 
-  const earthX = useTransform(scrollYProgress, [0, 1], ["-1.6%", "1.2%"]);
-  const earthY = useTransform(scrollYProgress, [0, 1], ["-0.6%", "0.8%"]);
-  const earthScale = useTransform(scrollYProgress, [0, 1], [1.08, 1.12]);
+  const earthX = useTransform(scrollYProgress, [0, 1], ["-2.8%", "2%"]);
+  const earthY = useTransform(scrollYProgress, [0, 1], ["-1.2%", "1.3%"]);
+  const earthScale = useTransform(scrollYProgress, [0, 1], [1.07, 1.14]);
 
-  const glowX = useTransform(scrollYProgress, [0, 1], ["-1.2%", "1.4%"]);
-  const glowY = useTransform(scrollYProgress, [0, 1], ["0%", "-1.4%"]);
-  const glowOpacity = useTransform(scrollYProgress, [0, 0.55, 1], [0.72, 0.9, 0.66]);
+  const glowX = useTransform(scrollYProgress, [0, 1], ["-2.4%", "2.6%"]);
+  const glowY = useTransform(scrollYProgress, [0, 1], ["0.4%", "-2.1%"]);
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.7, 0.95, 0.68]);
 
-  const particleY = useTransform(scrollYProgress, [0, 1], ["0%", "2.4%"]);
-  const particleOpacity = useTransform(scrollYProgress, [0, 0.7, 1], [0.035, 0.06, 0.03]);
-  const heroTextY = useTransform(scrollYProgress, [0, 0.35], [0, 6]);
+  const particleY = useTransform(scrollYProgress, [0, 1], ["0%", "3.8%"]);
+  const particleOpacity = useTransform(scrollYProgress, [0, 0.7, 1], [0.04, 0.08, 0.04]);
+  const heroTextY = useTransform(scrollYProgress, [0, 0.4], [0, -14]);
 
-  const cursorGlow = useMotionTemplate`radial-gradient(circle at ${cursorX}% ${cursorY}%, rgba(255, 64, 64, 0.12), rgba(255, 64, 64, 0) 36%)`;
+  const cursorGlow = useMotionTemplate`radial-gradient(circle at ${cursorX}% ${cursorY}%, rgba(255, 64, 64, 0.16), rgba(255, 64, 64, 0) 38%)`;
+  const heroShiftY = useMotionTemplate`${heroTextY}px`;
 
   function handlePointerMove(event: React.PointerEvent<HTMLElement>) {
     if (prefersReducedMotion || event.pointerType !== "mouse") {
@@ -95,7 +96,7 @@ export function HomepageCinematicScene({ children }: HomepageCinematicSceneProps
 
       <motion.div
         className="homepage-cinematic-content relative z-10"
-        style={prefersReducedMotion ? undefined : { ["--hero-shift-y" as string]: useMotionTemplate`${heroTextY}px` }}
+        style={prefersReducedMotion ? undefined : { ["--hero-shift-y" as string]: heroShiftY }}
       >
         {children}
       </motion.div>
