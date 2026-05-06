@@ -7,10 +7,10 @@ export async function SiteFooter() {
   const settings = await prisma.globalSetting.findFirst();
 
   return (
-    <footer className="relative border-t border-white/10 bg-[#050505]">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-400/70 to-transparent" />
-      <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-transparent to-[#050505]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(255,43,43,0.18),transparent_30%)]" />
+    <footer className="relative border-t border-red-500/20 bg-[#050505]">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-red-400/60 to-transparent blur-px" />
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/32 via-black/60 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_0%,rgba(255,43,43,0.12),transparent_35%)]" />
       <div className="relative mx-auto w-full max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
         <Reveal>
           <div className="rounded-xl border border-white/10 bg-gradient-to-r from-white/[0.06] via-white/[0.02] to-transparent px-6 py-6">

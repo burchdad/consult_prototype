@@ -78,6 +78,11 @@ export function HomepageCinematicScene({ children }: HomepageCinematicSceneProps
           style={prefersReducedMotion ? undefined : { x: glowX, y: glowY, opacity: glowOpacity }}
         />
         <motion.div
+          aria-hidden
+          className="homepage-orbital-arcs-layer"
+          style={prefersReducedMotion ? { opacity: 0.08 } : undefined}
+        />
+        <motion.div
           className="homepage-particle-layer"
           style={prefersReducedMotion ? undefined : { y: particleY, opacity: particleOpacity }}
         />

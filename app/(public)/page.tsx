@@ -101,12 +101,12 @@ const fallbackServices = [
 ];
 
 const fallbackPartners = [
-  "Federal Partner Alpha",
-  "Federal Partner Bravo",
-  "Federal Partner Charlie",
-  "Federal Partner Delta",
-  "Federal Partner Echo",
-  "Federal Partner Foxtrot",
+  "Northrop Grumman",
+  "ManTech International",
+  "SAIC",
+  "General Dynamics",
+  "Leidos Holdings",
+  "Booz Allen Hamilton",
 ];
 
 function categoryIcon(category: string) {
