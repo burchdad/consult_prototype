@@ -143,9 +143,13 @@ export default async function HomePage() {
   return (
     <main className="overflow-hidden">
       <section className="relative isolate border-b border-white/10">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa')] bg-cover bg-center opacity-35" />
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="hero-earth-layer" />
+          <div className="hero-atmosphere-layer" />
+          <div className="hero-grain-layer" />
+          <div className="hero-red-glow-layer" />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/75 to-[#050505]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_25%,rgba(255,43,43,0.24),transparent_28%)]" />
         <Section className="relative z-10 py-20 lg:py-24">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-red-400">
